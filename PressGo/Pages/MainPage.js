@@ -68,6 +68,45 @@ export default function MainPage(){
                     </View>
                 </ScrollView>
             </View>
+            <View style={styles.previewAreaP}>
+                <Text style={styles.title}>Les pressing près de chez vous</Text>
+                <ScrollView showsHorizontalScrollIndicator={false}
+                horizontal={true} style={styles.preview}>
+                    <Image source={
+                        require('../assets/images/services/pressing.png')
+                    } style={styles.myPressing}/>
+                    <Image source={
+                        require('../assets/images/services/pressing.png')
+                    } style={styles.myPressing}/>
+                    <Image source={
+                        require('../assets/images/services/pressing.png')
+                    } style={styles.myPressing}/>
+                    <Image source={
+                        require('../assets/images/services/pressing.png')
+                    } style={styles.myPressing}/>
+                    <Image source={
+                        require('../assets/images/services/pressing.png')
+                    } style={styles.myPressing}/>
+                    <Image source={
+                        require('../assets/images/services/pressing.png')
+                    } style={styles.myPressing}/>
+                    <Image source={
+                        require('../assets/images/services/pressing.png')
+                    } style={styles.myPressing}/>
+                    <Image source={
+                        require('../assets/images/services/pressing.png')
+                    } style={styles.myPressing}/>
+                    <Image source={
+                        require('../assets/images/services/pressing.png')
+                    } style={styles.myPressing}/>
+                    <Image source={
+                        require('../assets/images/services/pressing.png')
+                    } style={styles.myPressing}/>
+                    <Image source={
+                        require('../assets/images/services/pressing.png')
+                    } style={styles.myPressing}/>
+                </ScrollView>
+            </View>
         </View>
     )
 }
@@ -90,14 +129,37 @@ const styles = StyleSheet.create({
         fontSize :16
     },
     previewAreaS : {
-        paddingVertical : 32,
-        marginLeft : 16
+        paddingTop : 32,
+        marginLeft : 16,
     },
     serviceSpec : {
-        height : 251
+        height : 230,
+        width : 225,
+        marginRight : 16,
+        justifyContent : 'space-between'
     },
     myServices : {
         height : 167,
-        width : 207
+        width : 207,
+
+    },
+    name : {
+        fontSize : 16,
+        fontWeight : 'bold'
+    },
+    nameSpec : {
+        fontSize : 12,
+        color : "#8E9090",
+        width : 150
+    },
+    previewAreaP : {
+        marginLeft : 16,
+        marginTop : 24
+    },
+    myPressing : {
+        height : 50,
+        width : 65,
+        marginRight : 12,
+        borderRadius : 30
     }
 })
