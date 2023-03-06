@@ -48,7 +48,7 @@ export default function MainPage(){
                     <View style={styles.serviceSpec}>
                         <Image source={
                             require('../assets/images/services/nettoyageSec.jpg')
-                        } style={styles.myImages}/>
+                        } style={styles.myServices}/>
                         <Text style={styles.name}>Lavage à sec</Text>
                         <Text style={styles.nameSpec}>service de lavage à sec sans mousse</Text>
                     </View>
