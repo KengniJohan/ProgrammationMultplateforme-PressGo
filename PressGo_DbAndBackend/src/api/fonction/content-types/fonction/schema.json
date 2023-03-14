@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "fonctions",
+  "info": {
+    "singularName": "fonction",
+    "pluralName": "fonctions",
+    "displayName": "Fonction",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "intitule": {
+      "type": "string"
+    },
+    "date_ajout": {
+      "type": "date"
+    },
+    "agents": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::agent.agent",
+      "mappedBy": "fonction"
+    },
+    "Libelle": {
+      "type": "text"
+    }
+  }
+}

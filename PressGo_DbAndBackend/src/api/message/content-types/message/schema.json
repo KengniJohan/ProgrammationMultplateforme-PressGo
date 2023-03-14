@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "messages",
+  "info": {
+    "singularName": "message",
+    "pluralName": "messages",
+    "displayName": "Message",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "agence": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::agence.agence",
+      "inversedBy": "messages"
+    },
+    "contenu": {
+      "type": "text"
+    },
+    "date_emission": {
+      "type": "date"
+    },
+    "commande": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::commande.commande",
+      "mappedBy": "message"
+    },
+    "soumission": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::soumission.soumission",
+      "inversedBy": "message"
+    }
+  }
+}

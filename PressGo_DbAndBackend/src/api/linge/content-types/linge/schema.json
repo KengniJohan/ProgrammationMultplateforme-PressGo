@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "linges",
+  "info": {
+    "singularName": "linge",
+    "pluralName": "linges",
+    "displayName": "Linge"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "categorie_linge": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::categorie-linge.categorie-linge",
+      "inversedBy": "linges"
+    },
+    "type_linge": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::type-linge.type-linge",
+      "inversedBy": "linges"
+    },
+    "date_creation": {
+      "type": "date"
+    },
+    "linge_agences": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::linge-agence.linge-agence",
+      "mappedBy": "linge"
+    },
+    "details_besoin": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::details-besoin.details-besoin",
+      "inversedBy": "linges"
+    }
+  }
+}

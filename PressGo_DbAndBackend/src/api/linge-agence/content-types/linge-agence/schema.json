@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "linge_agences",
+  "info": {
+    "singularName": "linge-agence",
+    "pluralName": "linge-agences",
+    "displayName": "LingeAgence",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "linge": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::linge.linge",
+      "inversedBy": "linge_agences"
+    },
+    "date_ajout": {
+      "type": "date"
+    },
+    "date_retrait": {
+      "type": "date"
+    },
+    "agence": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::agence.agence",
+      "inversedBy": "linge_agences"
+    },
+    "offres": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::offre.offre",
+      "mappedBy": "linge_agence"
+    }
+  }
+}

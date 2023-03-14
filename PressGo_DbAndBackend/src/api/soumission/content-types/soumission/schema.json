@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "soumissions",
+  "info": {
+    "singularName": "soumission",
+    "pluralName": "soumissions",
+    "displayName": "Soumission"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "besoin": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::besoin.besoin",
+      "inversedBy": "soumissions"
+    },
+    "agence": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::agence.agence",
+      "inversedBy": "soumissions"
+    },
+    "date_soumission": {
+      "type": "date"
+    },
+    "message": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::message.message",
+      "mappedBy": "soumission"
+    }
+  }
+}

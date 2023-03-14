@@ -1,0 +1,67 @@
+{
+  "kind": "collectionType",
+  "collectionName": "agences",
+  "info": {
+    "singularName": "agence",
+    "pluralName": "agences",
+    "displayName": "Agence",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "linge_agences": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::linge-agence.linge-agence",
+      "mappedBy": "agence"
+    },
+    "service_agences": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::service-agence.service-agence",
+      "mappedBy": "agence"
+    },
+    "quartier": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::quartier.quartier",
+      "inversedBy": "agences"
+    },
+    "agents": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::agent.agent",
+      "mappedBy": "agence"
+    },
+    "messages": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::message.message",
+      "mappedBy": "agence"
+    },
+    "date_creation": {
+      "type": "date"
+    },
+    "pressing": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::pressing.pressing",
+      "inversedBy": "agences"
+    },
+    "soumissions": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::soumission.soumission",
+      "mappedBy": "agence"
+    },
+    "commentaires": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::commentaire.commentaire",
+      "mappedBy": "agence"
+    }
+  }
+}

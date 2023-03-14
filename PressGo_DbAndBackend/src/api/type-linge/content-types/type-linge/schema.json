@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "type_linges",
+  "info": {
+    "singularName": "type-linge",
+    "pluralName": "type-linges",
+    "displayName": "TypeLinge"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "intitule": {
+      "type": "string"
+    },
+    "linges": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::linge.linge",
+      "mappedBy": "type_linge"
+    }
+  }
+}

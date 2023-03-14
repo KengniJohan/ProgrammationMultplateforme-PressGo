@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "services",
+  "info": {
+    "singularName": "service",
+    "pluralName": "services",
+    "displayName": "Service"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "categorie_service": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::categorie-service.categorie-service",
+      "inversedBy": "services"
+    },
+    "type_service": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::type-service.type-service",
+      "inversedBy": "services"
+    },
+    "date_creation": {
+      "type": "date"
+    },
+    "service_agences": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::service-agence.service-agence",
+      "mappedBy": "service"
+    },
+    "details_besoins": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::details-besoin.details-besoin",
+      "mappedBy": "service"
+    }
+  }
+}

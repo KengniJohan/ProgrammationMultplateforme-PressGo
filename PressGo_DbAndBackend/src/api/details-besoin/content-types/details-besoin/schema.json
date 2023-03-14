@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "details_besoins",
+  "info": {
+    "singularName": "details-besoin",
+    "pluralName": "details-besoins",
+    "displayName": "DetailsBesoin"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "service": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::service.service",
+      "inversedBy": "details_besoins"
+    },
+    "linges": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::linge.linge",
+      "mappedBy": "details_besoin"
+    },
+    "quantite": {
+      "type": "biginteger"
+    },
+    "prix_unitaire": {
+      "type": "decimal"
+    },
+    "besoin": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::besoin.besoin",
+      "inversedBy": "details_besoins"
+    }
+  }
+}

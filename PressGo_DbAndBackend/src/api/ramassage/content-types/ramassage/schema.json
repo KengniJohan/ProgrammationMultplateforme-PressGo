@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ramassages",
+  "info": {
+    "singularName": "ramassage",
+    "pluralName": "ramassages",
+    "displayName": "Ramassage"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "commande": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::commande.commande",
+      "inversedBy": "ramassage"
+    },
+    "coursier": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::coursier.coursier",
+      "inversedBy": "ramassages"
+    },
+    "date_ramassage": {
+      "type": "date"
+    },
+    "validation": {
+      "type": "boolean"
+    }
+  }
+}

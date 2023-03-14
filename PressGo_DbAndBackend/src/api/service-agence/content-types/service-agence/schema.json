@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "service_agences",
+  "info": {
+    "singularName": "service-agence",
+    "pluralName": "service-agences",
+    "displayName": "ServiceAgence"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "service": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::service.service",
+      "inversedBy": "service_agences"
+    },
+    "date_ajout": {
+      "type": "date"
+    },
+    "date_retrait": {
+      "type": "date"
+    },
+    "agence": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::agence.agence",
+      "inversedBy": "service_agences"
+    },
+    "offres": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::offre.offre",
+      "mappedBy": "service_agence"
+    }
+  }
+}

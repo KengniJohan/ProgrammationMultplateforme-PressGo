@@ -1,0 +1,50 @@
+{
+  "kind": "collectionType",
+  "collectionName": "commandes",
+  "info": {
+    "singularName": "commande",
+    "pluralName": "commandes",
+    "displayName": "Commande",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "message": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::message.message",
+      "inversedBy": "commande"
+    },
+    "date_emission": {
+      "type": "date"
+    },
+    "adresse_payement": {
+      "type": "string"
+    },
+    "ramassage": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::ramassage.ramassage",
+      "mappedBy": "commande"
+    },
+    "livraison": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::livraison.livraison",
+      "mappedBy": "commande"
+    },
+    "quartier_ramassage": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::quartier.quartier"
+    },
+    "quartier_livraison": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::quartier.quartier"
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "villes",
+  "info": {
+    "singularName": "ville",
+    "pluralName": "villes",
+    "displayName": "Ville"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nom": {
+      "type": "string"
+    },
+    "pay": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::pays.pays",
+      "inversedBy": "villes"
+    },
+    "quartiers": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::quartier.quartier",
+      "mappedBy": "ville"
+    }
+  }
+}

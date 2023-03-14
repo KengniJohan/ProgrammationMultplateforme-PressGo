@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "offres",
+  "info": {
+    "singularName": "offre",
+    "pluralName": "offres",
+    "displayName": "Offre",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "linge_agence": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::linge-agence.linge-agence",
+      "inversedBy": "offres"
+    },
+    "service_agence": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::service-agence.service-agence",
+      "inversedBy": "offres"
+    },
+    "prix_unitaire": {
+      "type": "decimal"
+    },
+    "annonce": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::annonce.annonce",
+      "inversedBy": "offres"
+    },
+    "promotion": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::promotion.promotion",
+      "mappedBy": "offre"
+    }
+  }
+}

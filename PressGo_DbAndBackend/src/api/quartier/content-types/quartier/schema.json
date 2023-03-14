@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "quartiers",
+  "info": {
+    "singularName": "quartier",
+    "pluralName": "quartiers",
+    "displayName": "Quartier"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nom": {
+      "type": "string"
+    },
+    "agences": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::agence.agence",
+      "mappedBy": "quartier"
+    },
+    "ville": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::ville.ville",
+      "inversedBy": "quartiers"
+    }
+  }
+}

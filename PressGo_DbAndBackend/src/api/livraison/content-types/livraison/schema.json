@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "livraisons",
+  "info": {
+    "singularName": "livraison",
+    "pluralName": "livraisons",
+    "displayName": "Livraison"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "coursier": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::coursier.coursier",
+      "inversedBy": "livraisons"
+    },
+    "commande": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::commande.commande",
+      "inversedBy": "livraison"
+    },
+    "date_livraison": {
+      "type": "date"
+    },
+    "validation": {
+      "type": "boolean"
+    }
+  }
+}

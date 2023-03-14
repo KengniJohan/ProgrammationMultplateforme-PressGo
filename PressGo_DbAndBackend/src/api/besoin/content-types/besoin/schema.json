@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "besoins",
+  "info": {
+    "singularName": "besoin",
+    "pluralName": "besoins",
+    "displayName": "Besoin"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "date_elaboration": {
+      "type": "date"
+    },
+    "client": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::client.client",
+      "inversedBy": "besoins"
+    },
+    "details_besoins": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::details-besoin.details-besoin",
+      "mappedBy": "besoin"
+    },
+    "soumissions": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::soumission.soumission",
+      "mappedBy": "besoin"
+    }
+  }
+}
