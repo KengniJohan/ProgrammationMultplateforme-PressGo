@@ -62,6 +62,16 @@
       "relation": "oneToMany",
       "target": "api::commentaire.commentaire",
       "mappedBy": "agence"
+    },
+    "apercu": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }

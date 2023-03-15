@@ -65,7 +65,7 @@ export default function Home() {
           <View style={styles.serviceSpec}>
             <Image
               source={require("../assets/images/services/nettoyageSec.jpg")}
-              style={styles.myImages}
+              style={styles.myServices}
             />
             <Text style={styles.name}>Lavage à sec</Text>
             <Text style={styles.nameSpec}>

@@ -4,7 +4,8 @@
   "info": {
     "singularName": "linge",
     "pluralName": "linges",
-    "displayName": "Linge"
+    "displayName": "Linge",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -37,6 +38,16 @@
       "relation": "manyToOne",
       "target": "api::details-besoin.details-besoin",
       "inversedBy": "linges"
+    },
+    "apercu": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }
