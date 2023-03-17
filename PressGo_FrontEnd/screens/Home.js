@@ -1,8 +1,12 @@
 import React from "react";
-import { StyleSheet, View, ScrollView, Text, Image } from "react-native";
+import { StyleSheet, View, ScrollView, Text, Image, Pressable } from "react-native";
 import TopBar from "../components/TopBar";
+import images from "../constants/images";
+import LaundryPreview from "../components/LaundryPreview";
+import ServicePreview from "../components/ServicePreview";
 
-export default function Home() {
+
+export default function Home({navigation}) {
   return (
     <View style={styles.mainPage}>
       <TopBar />
@@ -13,26 +17,12 @@ export default function Home() {
           horizontal={true}
           style={styles.preview}
         >
-          <Image
-            source={require("../assets/images/linges/linge1.png")}
-            style={styles.myImages}
-          />
-          <Image
-            source={require("../assets/images/linges/linge2.png")}
-            style={styles.myImages}
-          />
-          <Image
-            source={require("../assets/images/linges/linge3.png")}
-            style={styles.myImages}
-          />
-          <Image
-            source={require("../assets/images/linges/linge4.png")}
-            style={styles.myImages}
-          />
-          <Image
-            source={require("../assets/images/linges/linge1.png")}
-            style={styles.myImages}
-          />
+          <LaundryPreview imageSource={images.laundryType1} navigation={navigation}/>
+          <LaundryPreview imageSource={images.laundryType2} navigation={navigation}/>
+          <LaundryPreview imageSource={images.laundryType3} navigation={navigation}/>
+          <LaundryPreview imageSource={images.laundryType4} navigation={navigation}/>
+          <LaundryPreview imageSource={images.laundryType1} navigation={navigation}/>
+          <LaundryPreview imageSource={images.laundryType2} navigation={navigation}/>
         </ScrollView>
       </View>
       <View style={styles.previewAreaS}>
@@ -42,56 +32,55 @@ export default function Home() {
           horizontal={true}
           style={styles.preview}
         >
-          <View style={styles.serviceSpec}>
-            <Image
-              source={require("../assets/images/services/nettoyageSec.jpg")}
-              style={styles.myServices}
-            />
-            <Text style={styles.name}>Lavage à sec</Text>
-            <Text style={styles.nameSpec}>
-              service de lavage à sec sans mousse
-            </Text>
-          </View>
-          <View style={styles.serviceSpec}>
-            <Image
-              source={require("../assets/images/services/nettoyageSec.jpg")}
-              style={styles.myServices}
-            />
-            <Text style={styles.name}>Lavage à sec</Text>
-            <Text style={styles.nameSpec}>
-              service de lavage à sec sans mousse
-            </Text>
-          </View>
-          <View style={styles.serviceSpec}>
-            <Image
-              source={require("../assets/images/services/nettoyageSec.jpg")}
-              style={styles.myServices}
-            />
-            <Text style={styles.name}>Lavage à sec</Text>
-            <Text style={styles.nameSpec}>
-              service de lavage à sec sans mousse
-            </Text>
-          </View>
-          <View style={styles.serviceSpec}>
-            <Image
-              source={require("../assets/images/services/nettoyageSec.jpg")}
-              style={styles.myServices}
-            />
-            <Text style={styles.name}>Lavage à sec</Text>
-            <Text style={styles.nameSpec}>
-              service de lavage à sec sans mousse
-            </Text>
-          </View>
-          <View style={styles.serviceSpec}>
-            <Image
-              source={require("../assets/images/services/nettoyageSec.jpg")}
-              style={styles.myServices}
-            />
-            <Text style={styles.name}>Lavage à sec</Text>
-            <Text style={styles.nameSpec}>
-              service de lavage à sec sans mousse
-            </Text>
-          </View>
+          <ServicePreview 
+              imageSource={images.service1} 
+              title="Lavage à sec" 
+              description="service de lavage à sec sans mousse"
+              navigation={navigation}
+              style={styles.serviceSpec}
+          />
+          <ServicePreview 
+              imageSource={images.service2} 
+              title="Lavage à sec" 
+              description="service de lavage à sec sans mousse"
+              navigation={navigation}
+              style={styles.serviceSpec}
+          />
+          <ServicePreview 
+              imageSource={images.service1} 
+              title="Lavage à sec" 
+              description="service de lavage à sec sans mousse"
+              navigation={navigation}
+              style={styles.serviceSpec}
+          />
+          <ServicePreview 
+              imageSource={images.service2} 
+              title="Lavage à sec" 
+              description="service de lavage à sec sans mousse"
+              navigation={navigation}
+              style={styles.serviceSpec}
+          />
+          <ServicePreview 
+              imageSource={images.service1} 
+              title="Lavage à sec" 
+              description="service de lavage à sec sans mousse"
+              navigation={navigation}
+              style={styles.serviceSpec}
+          />
+          <ServicePreview 
+              imageSource={images.service2} 
+              title="Lavage à sec" 
+              description="service de lavage à sec sans mousse"
+              navigation={navigation}
+              style={styles.serviceSpec}
+          />
+          <ServicePreview 
+              imageSource={images.service1} 
+              title="Lavage à sec" 
+              description="service de lavage à sec sans mousse"
+              navigation={navigation}
+              style={styles.serviceSpec}
+          />
         </ScrollView>
       </View>
       <View style={styles.previewAreaP}>
@@ -157,11 +146,6 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     marginLeft: 16
   },
-  myImages: {
-    marginRight: 12,
-    width: 82,
-    height: 116
-  },
   title: {
     paddingVertical: 16,
     fontWeight: "bold",
@@ -170,25 +154,6 @@ const styles = StyleSheet.create({
   previewAreaS: {
     paddingTop: 32,
     marginLeft: 16
-  },
-  serviceSpec: {
-    height: 230,
-    width: 225,
-    marginRight: 16,
-    justifyContent: "space-between"
-  },
-  myServices: {
-    height: 167,
-    width: 207
-  },
-  name: {
-    fontSize: 16,
-    fontWeight: "bold"
-  },
-  nameSpec: {
-    fontSize: 12,
-    color: "#8E9090",
-    width: 150
   },
   previewAreaP: {
     marginLeft: 16,
