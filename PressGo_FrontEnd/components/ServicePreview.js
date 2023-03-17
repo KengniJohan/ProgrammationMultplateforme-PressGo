@@ -6,7 +6,7 @@ const ServicePreview = ({imageSource, title, description, navigation}) => {
         <View style={styles.serviceSpec}>
             <Pressable 
                 onPress={
-                    () => navigation.navigate({name : 'Bookmark'})
+                    () => navigation.navigate({name : 'DestinationDetail'})
                 }
             >
                 <Image

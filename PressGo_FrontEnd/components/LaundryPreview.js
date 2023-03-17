@@ -5,7 +5,7 @@ const LaundryPreview = ({imageSource, navigation}) => {
     return (
         <View>
             <Pressable style={styles.disposition} onPress={
-                () => navigation.navigate({name : 'Bookmark'})
+                () => navigation.navigate({name : 'DestinationDetail'})
             }>
                 <Image
                     source={imageSource}
