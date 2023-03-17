@@ -74,6 +74,7 @@ const DestinationDetail = ({ navigation }) => {
       />
       <Pressable
         style={({ pressed }) => [styles.button, pressed && styles.pressed]}
+        onPress={() => navigation.navigate({name : 'Bookmark'})}
       >
         <View>
           <Text style={styles.buttonText}>Ajouter au panier </Text>
