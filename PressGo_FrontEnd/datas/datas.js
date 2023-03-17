@@ -1,4 +1,4 @@
-import { images } from "../constants"
+import { images} from "../constants"
 
 export const laundriesData = [
     {
@@ -28,4 +28,73 @@ export const servicesData =  [
         name : "lavage à eau",
         image : images.service2
     }
+]
+
+export const deleveryInformation = [
+    {
+        title : "Mon adresse",
+        body : "Logbessou city",
+        btnName : "my-location",
+        btnColor : "blue",
+        bgColor : "#D2D3D3"
+    },
+    {
+        title : "Mon adresse de livraison",
+        body : "La cite sic",
+        btnName : "location-pin",
+        btnColor : "blue",
+        bgColor : "#D2D3D3"
+    }
+]
+
+export const addedServices = [
+    {
+        title : "Service de lavage à sec",
+        body : "Option pour tout departement près de chez vous",
+        btnName : "local-laundry-service",
+        btnColor : "white",
+        bgColor : "blue"
+    },
+    {
+        title : "Service de lavage à sec",
+        body : "Option pour tout departement près de chez vous",
+        btnName : "local-laundry-service",
+        btnColor : "white",
+        bgColor : "red"
+    },
+    {
+        title : "Service de lavage à sec",
+        body : "Option pour tout departement près de chez vous",
+        btnName : "local-laundry-service",
+        btnColor : "white",
+        bgColor : "red"
+    },
+    {
+        title : "Service de lavage à sec",
+        body : "Option pour tout departement près de chez vous",
+        btnName : "local-laundry-service",
+        btnColor : "white",
+        bgColor : "red"
+    },
+    {
+        title : "Service de lavage à sec",
+        body : "Option pour tout departement près de chez vous",
+        btnName : "local-laundry-service",
+        btnColor : "white",
+        bgColor : "red"
+    },
+    {
+        title : "Service de lavage à sec",
+        body : "Option pour tout departement près de chez vous",
+        btnName : "local-laundry-service",
+        btnColor : "white",
+        bgColor : "red"
+    },
+    {
+        title : "Service de lavage à sec",
+        body : "Option pour tout departement près de chez vous",
+        btnName : "local-laundry-service",
+        btnColor : "white",
+        bgColor : "red"
+    },
 ]
