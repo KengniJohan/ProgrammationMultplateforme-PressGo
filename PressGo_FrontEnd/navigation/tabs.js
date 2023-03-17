@@ -2,7 +2,8 @@ import React from "react";
 import { Image } from "react-native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
-import { Home } from "../screens/";
+import { Home} from "../screens/";
+import Bookmark from "../screens/Bookmark";
 
 import { icons, COLORS } from "../constants";
 
@@ -11,7 +12,7 @@ const Tab = createBottomTabNavigator();
 const tabOptions = {
   showLabel: false,
   style: {
-    height: 90,
+    height: 48,
     shadowColor: "#000",
     shadowOffset: {
       width: 0,
@@ -40,8 +41,8 @@ const Tabs = () => {
                   resizeMode="contain"
                   style={{
                     tintColor: tintColor,
-                    width: 30,
-                    height: 30
+                    width: 24,
+                    height: 24
                   }}
                 />
               );
@@ -52,8 +53,8 @@ const Tabs = () => {
                   resizeMode="contain"
                   style={{
                     tintColor: tintColor,
-                    width: 30,
-                    height: 30
+                    width: 24,
+                    height: 24
                   }}
                 />
               );
@@ -64,8 +65,8 @@ const Tabs = () => {
                   resizeMode="contain"
                   style={{
                     tintColor: tintColor,
-                    width: 30,
-                    height: 30
+                    width: 24,
+                    height: 24
                   }}
                 />
               );
@@ -76,8 +77,8 @@ const Tabs = () => {
                   resizeMode="contain"
                   style={{
                     tintColor: tintColor,
-                    width: 30,
-                    height: 30
+                    width: 24,
+                    height: 24
                   }}
                 />
               );
@@ -87,7 +88,7 @@ const Tabs = () => {
     >
       <Tab.Screen name="Home" component={Home} />
       <Tab.Screen name="Search" component={Home} />
-      <Tab.Screen name="Bookmark" component={Home} />
+      <Tab.Screen name="Bookmark" component={Bookmark} />
       <Tab.Screen name="Account" component={Home} />
     </Tab.Navigator>
   );
