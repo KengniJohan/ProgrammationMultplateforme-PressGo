@@ -76,6 +76,7 @@ const App = () => {
           options={{ headerShown: false }}
         />
 
+
         {/* Tabs */}
         <Stack.Screen
           name="Home"
