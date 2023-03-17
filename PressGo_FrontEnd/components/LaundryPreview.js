@@ -1,15 +1,16 @@
 import React from "react";
 import {StyleSheet, View, Pressable, Image, Text} from 'react-native'
 
-const LaundryPreview = ({imageSource, texte}) => {
+const LaundryPreview = ({imageSource, navigation}) => {
     return (
         <View>
-            <Pressable style={styles.disposition}>
+            <Pressable style={styles.disposition} onPress={
+                () => navigation.navigate({name : 'Bookmark'})
+            }>
                 <Image
                     source={imageSource}
                     style={styles.myImages}
                 />
-                <Text>{texte}</Text>
             </Pressable>
         </View>
     )
@@ -25,3 +26,5 @@ const styles = StyleSheet.create({
         height: 116
     }
 })
+
+export default LaundryPreview
